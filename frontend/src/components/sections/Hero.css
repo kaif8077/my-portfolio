@@ -1,0 +1,621 @@
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+/* Special container for Hero */
+.container-kaif {
+  padding-top: 50px !important;
+}
+
+/* Hero Base Styles */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 80px 0;
+  background: linear-gradient(135deg, #4299e1 0%, #3182ce 100%);
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"><path fill="%23ffffff" fill-opacity="0.03" d="M100,0C44.8,0,0,44.8,0,100s44.8,100,100,100s100-44.8,100-100S155.2,0,100,0z M100,180c-44.2,0-80-35.8-80-80 s35.8-80,80-80s80,35.8,80,80S144.2,180,100,180z"/></svg>');
+  opacity: 0.1;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  width: 100%;
+}
+
+/* Left Side - Text Content */
+.hero-text {
+  color: white;
+  animation: slideInLeft 0.8s ease-out;
+}
+
+.greeting {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.wave {
+  font-size: 2rem;
+  animation: wave 2s infinite;
+}
+
+@keyframes wave {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-15deg); }
+  75% { transform: rotate(15deg); }
+}
+
+.hero-title {
+  font-size: 4.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 25px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.name-highlight {
+  color: #fff;
+  position: relative;
+  display: inline-block;
+}
+
+.name-highlight::after {
+  content: '';
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  height: 15px;
+  background: rgba(255, 255, 255, 0.2);
+  z-index: -1;
+  transform: skewX(-15deg);
+}
+
+.hero-description {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  opacity: 0.9;
+  margin-bottom: 40px;
+  max-width: 500px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  margin: 15px 0;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 35px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: white;
+  color: #667eea;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  background: #f8f9fa;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: white;
+  transform: translateY(-5px);
+}
+
+.btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Right Side - Image (Hidden on Mobile) */
+.hero-image {
+  animation: slideInRight 0.8s ease-out;
+}
+
+.image-container {
+  position: relative;
+  max-width: 500px;
+  margin-left: auto;
+}
+
+.profile-image {
+  width: 80%;
+  height: 550px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 30px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 2;
+  transform: perspective(1000px) rotateY(-10deg);
+  transition: transform 0.5s ease;
+}
+
+.profile-image:hover {
+  transform: perspective(1000px) rotateY(0deg);
+}
+
+/* Image Placeholder */
+.image-placeholder {
+  width: 80%;
+  height: 550px;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.5) 0%, rgba(118, 75, 162, 0.5) 100%);
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: relative;
+  z-index: 2;
+}
+
+.placeholder-icon {
+  width: 120px;
+  height: 120px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #667eea;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.image-placeholder span {
+  font-size: 1.5rem;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+.image-frame {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 80%;
+  height: 550px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 30px;
+  z-index: 1;
+}
+
+/* Floating Elements */
+.floating-element {
+  position: absolute;
+  font-size: 2.5rem;
+  z-index: 3;
+  animation: float 3s infinite ease-in-out;
+  filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.2));
+}
+
+.floating-element.react {
+  top: -30px;
+  left: -30px;
+  animation-delay: 0s;
+}
+
+.floating-element.js {
+  top: 50%;
+  right: -40px;
+  animation-delay: 0.5s;
+}
+
+.floating-element.css {
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation-delay: 1s;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(5deg); }
+}
+
+/* Experience Badge */
+.experience-badge {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  background: white;
+  color: #667eea;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  z-index: 3;
+  animation: pulse 2s infinite;
+}
+
+.exp-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.exp-text {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-top: 5px;
+  opacity: 0.8;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+/* Animations */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Download button spinner */
+.btn.btn-secondary.downloading {
+  opacity: 0.8;
+  cursor: not-allowed;
+}
+
+.btn.btn-secondary.downloading .spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Disabled state */
+.btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* ======================== */
+/* RESPONSIVE DESIGN - Photo Hide on Mobile */
+/* ======================== */
+
+/* Large Tablets (992px to 768px) */
+@media (max-width: 992px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 50px;
+    text-align: center;
+  }
+  
+  .hero-title {
+    font-size: 3.5rem;
+  }
+  
+  .hero-description {
+    margin: 0 auto 40px;
+    max-width: 90%;
+    font-size: 1.1rem;
+  }
+  
+  .image-container {
+    margin: 0 auto;
+    max-width: 450px;
+  }
+  
+  .hero-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  .greeting {
+    justify-content: center;
+  }
+  
+  .profile-image,
+  .image-placeholder,
+  .image-frame {
+    width: 90%;
+    height: 450px;
+    margin: 0 auto;
+  }
+  
+  .image-frame {
+    top: 15px;
+    right: 15px;
+  }
+  
+  .floating-element {
+    font-size: 2rem;
+  }
+  
+  .floating-element.react {
+    top: -20px;
+    left: -10px;
+  }
+  
+  .floating-element.js {
+    right: -20px;
+  }
+  
+  .floating-element.css {
+    bottom: -15px;
+  }
+  
+  .experience-badge {
+    padding: 15px;
+    right: -10px;
+    bottom: -15px;
+  }
+  
+  .exp-number {
+    font-size: 2rem;
+  }
+}
+
+/* Tablets (768px to 576px) - Photo Still Shows */
+@media (max-width: 768px) {
+  .hero {
+    padding: 60px 0;
+    min-height: auto;
+  }
+  
+  .hero-title {
+    font-size: 2.8rem;
+    line-height: 1.2;
+  }
+  
+  .hero-description {
+    font-size: 1.05rem;
+    max-width: 100%;
+    padding: 0 10px;
+  }
+  
+  .btn {
+    padding: 12px 25px;
+    font-size: 1rem;
+    min-width: 160px;
+  }
+  
+  .image-container {
+    max-width: 400px;
+  }
+  
+  .profile-image,
+  .image-placeholder,
+  .image-frame {
+    width: 85%;
+    height: 400px;
+  }
+  
+  .placeholder-icon {
+    width: 100px;
+    height: 100px;
+    font-size: 2.5rem;
+  }
+  
+  .image-placeholder span {
+    font-size: 1.3rem;
+  }
+  
+  .experience-badge {
+    padding: 12px;
+    right: 0;
+    bottom: -10px;
+  }
+  
+  .exp-number {
+    font-size: 1.8rem;
+  }
+  
+  .exp-text {
+    font-size: 0.8rem;
+  }
+}
+
+/* Mobile (576px and below) - Photo HIDES */
+@media (max-width: 576px) {
+  .hero {
+    padding: 50px 0 30px;
+  }
+  
+  .hero-title {
+    font-size: 2.4rem;
+    margin-bottom: 20px;
+  }
+  
+  .name-highlight::after {
+    height: 12px;
+    bottom: 8px;
+  }
+  
+  .greeting {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+  }
+  
+  .wave {
+    font-size: 1.8rem;
+  }
+  
+  .hero-description {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    line-height: 1.6;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 40px;
+  }
+  
+  .btn {
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
+    padding: 14px 20px;
+  }
+  
+  /* PHOTO HIDES ON MOBILE */
+  .hero-image {
+    display: none;
+  }
+  
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .experience-badge {
+    display: none;
+  }
+  
+  .floating-element {
+    display: none;
+  }
+}
+
+/* Small Mobile (480px and below) - Photo HIDES */
+@media (max-width: 480px) {
+  .hero {
+    padding: 40px 0 20px;
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+  
+  .name-highlight::after {
+    height: 10px;
+    bottom: 6px;
+  }
+  
+  .greeting {
+    font-size: 1rem;
+    gap: 8px;
+  }
+  
+  .wave {
+    font-size: 1.5rem;
+  }
+  
+  .hero-description {
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+    line-height: 1.5;
+  }
+  
+  .hero-buttons {
+    gap: 12px;
+    margin-bottom: 30px;
+  }
+  
+  .btn {
+    max-width: 100%;
+    padding: 12px 16px;
+    font-size: 0.95rem;
+  }
+  
+  .btn svg {
+    width: 18px;
+    height: 18px;
+  }
+  
+  /* PHOTO HIDES ON MOBILE */
+  .hero-image {
+    display: none;
+  }
+}
+
+/* Extra Small Mobile (375px and below) - Photo HIDES */
+@media (max-width: 375px) {
+  .hero-title {
+    font-size: 1.8rem;
+  }
+  
+  .hero-description {
+    font-size: 0.9rem;
+  }
+  
+  .btn {
+    padding: 10px 14px;
+    font-size: 0.9rem;
+  }
+  
+  /* PHOTO HIDES ON MOBILE */
+  .hero-image {
+    display: none;
+  }
+}

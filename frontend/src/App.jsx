@@ -1,0 +1,40 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/layouts/Navbar';
+import Footer from './components/layouts/Footer';
+import Home from './pages/Home';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import Project from './pages/Project';
+import AdminLogin from './pages/AdminLogin';
+import AdminDashboard from './pages/AdminDashboard';
+import './App.css';
+
+function App() {
+  return (
+    <Router>
+      <div className="app">
+        <Navbar />
+        <main className="main-content">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/projects" element={<Project />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/admin/login" element={<AdminLogin />} />
+            <Route path="/admin/dashboard" element={<AdminDashboard />} />
+            {/* Optional: 404 page */}
+            <Route path="*" element={
+              <div className="page">
+                <h1>404 - Page Not Found</h1>
+                <p>The page you are looking for does not exist.</p>
+              </div>
+            } />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </Router>
+  );
+}
+
+export default App;
