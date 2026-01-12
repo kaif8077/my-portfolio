@@ -7,9 +7,17 @@ dotenv.config();
 
 const app = express();
 
+// Simpler version that works for both environments
 app.use(cors({
-  origin: 'http://localhost:5173',
-  credentials: true
+  origin: [
+    'http://localhost:5173',
+    'https://my-portfolio-ten-wheat-68.vercel.app',
+    'https://my-portfolio-git-main-kaif8077.vercel.app'
+    
+  ],
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'x-auth-token', 'X-Requested-With']
 }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
