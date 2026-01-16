@@ -3,7 +3,7 @@ import './AboutSection.css';
 
 const AboutSection = () => {
   const navigate = useNavigate();
-  const profileImage = "/kaif_small.jpeg";
+  const profileImage = "/kaif_flip.png";
   const handleLearnMore = () => {
     navigate('/about');
   };
