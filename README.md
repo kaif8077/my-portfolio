@@ -9,7 +9,7 @@ This is my personal full-stack portfolio website showcasing my projects, skills,
 - Skills and technology overview
 - Contact section for easy communication
 
-## 🛠️ Technologies Used
+## Technologies Used
 ### Frontend
 - React.js
 - JavaScript (ES6+)
