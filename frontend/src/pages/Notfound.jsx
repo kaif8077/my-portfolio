@@ -18,8 +18,6 @@ const NotFound = () => {
                         It might have been moved, deleted, or never existed in the first place.
                     </p>
 
-
-
                     
                 </div>
             </div>
