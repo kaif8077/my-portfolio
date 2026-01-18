@@ -2,18 +2,11 @@ import React from 'react';
 import './NotFound.css';
 
 const NotFound = () => {
-    const handleGoHome = () => {
-        // In a real app, this would navigate to home page
-        window.location.href = '/';
-    };
-
-    const handleGoBack = () => {
-        window.history.back();
-    };
+    
 
     return (
         <>
-            {/* This div creates the 100px gap above the navbar */}
+           
             <div className="navbar-gap"></div>
 
             <div className="not-found-container">

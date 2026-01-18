@@ -23,7 +23,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/admin/login" element={<AdminLogin />} />
             <Route path="/admin/dashboard" element={<AdminDashboard />} />
-            {/* Optional: 404 page */}
+            
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
