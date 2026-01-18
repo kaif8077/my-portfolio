@@ -7,6 +7,7 @@ import Contact from './pages/Contact';
 import Project from './pages/Project';
 import AdminLogin from './pages/AdminLogin';
 import AdminDashboard from './pages/AdminDashboard';
+import NotFound from './pages/Notfound';
 import './App.css';
 
 function App() {
@@ -23,12 +24,7 @@ function App() {
             <Route path="/admin/login" element={<AdminLogin />} />
             <Route path="/admin/dashboard" element={<AdminDashboard />} />
             {/* Optional: 404 page */}
-            <Route path="*" element={
-              <div className="page">
-                <h1>404 - Page Not Found</h1>
-                <p>The page you are looking for does not exist.</p>
-              </div>
-            } />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
         <Footer />
