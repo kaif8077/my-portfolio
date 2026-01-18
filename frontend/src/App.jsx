@@ -7,6 +7,7 @@ import Contact from './pages/Contact';
 import Project from './pages/Project';
 import AdminLogin from './pages/AdminLogin';
 import AdminDashboard from './pages/AdminDashboard';
+import NotFound from './pages/Notfound';
 
 
 import './App.css';
@@ -24,8 +25,8 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/admin/login" element={<AdminLogin />} />
             <Route path="/admin/dashboard" element={<AdminDashboard />} />
-            
-            <Route path="*" element={<>hello</>} />
+
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
         <Footer />
