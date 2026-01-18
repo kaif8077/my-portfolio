@@ -702,9 +702,7 @@
   }
 }
 .empty-card{
-  display: flex;
   justify-content: center;
-  align-items: center;
-  padding: 65px;
+  padding: 75px;
   
 }
