@@ -146,18 +146,32 @@ const Navbar = () => {
                 e.target.nextElementSibling.style.display = 'flex';
               }}
             />
-            <div className="mobile-logo-fallback">
+            {/* <div className="mobile-logo-fallback">
               <span>K</span>
+            </div> */}
+            <div className="logo-image-container">
+              <img 
+                src="/kaif_small.jpeg" 
+                alt="Kaif" 
+                className="logo-image"
+                onError={(e) => {
+                  e.target.style.display = 'none';
+                  e.target.nextElementSibling.style.display = 'flex';
+                }}
+              />
+              <div className="logo-fallback">
+                <span className="logo-text">K</span>
+              </div>
             </div>
             <span className="mobile-brand">Kaif</span>
           </div>
-          <button 
+          {/* <button 
             className="mobile-close-btn"
             onClick={() => setIsMenuOpen(false)}
             aria-label="Close menu"
           >
-            ×
-          </button>
+            
+          </button> */}
         </div>
         
         <div className="mobile-links">
