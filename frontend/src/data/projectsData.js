@@ -14,7 +14,7 @@ const projectsData = [
     category: "Full Stack"
   },
   {
-    id: 2,
+    id: 3,
     title: "My Portfolio",
     description: "Personal portfolio showcasing projects, skills, experience, and contact details with a clean responsive design.",
     image: portfolio,
@@ -24,7 +24,7 @@ const projectsData = [
     category: "Frontend"
   },
   {
-    id: 3,
+    id: 2,
     title: "Prescripto",
     description: "A full-stack doctor appointment booking platform that allows patients to browse doctors, book appointments, and manage schedules online.",
     image: prescripto,
