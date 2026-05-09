@@ -46,7 +46,7 @@ const projectsData = [
     technologies: ["React", "JavaScript", "AI Integration", "Node.js"],
     github: "https://github.com/kaif8077/ai-gmail-assistant",
     live: "",
-    category: "AI Integration"
+    category: "API Integration"
   },
 
   {
