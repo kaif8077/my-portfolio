@@ -674,9 +674,9 @@
     font-size: 1rem;
   }
   
-  .filter-container {
+  /* .filter-container {
     justify-content: space-between;
-  }
+  } */
   
   .filter-btn {
     padding: 5px 12px;
