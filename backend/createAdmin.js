@@ -34,7 +34,7 @@ async function createAdmin() {
     
     // Check if admin exists
     console.log('🔍 Checking for existing admin...');
-    const existingAdmin = await Admin.findOne({ email: 'admin@example.com' });
+    const existingAdmin = await Admin.findOne({ email: 'kaif@gmail.com' });
     
     if (existingAdmin) {
       console.log('✅ Admin already exists');
@@ -45,18 +45,18 @@ async function createAdmin() {
       
       // Hash password manually
       const salt = await bcrypt.genSalt(10);
-      const hashedPassword = await bcrypt.hash('admin123', salt);
+      const hashedPassword = await bcrypt.hash('kaif123', salt);
       
       // Create admin with hashed password
       const admin = new Admin({
-        email: 'admin@example.com',
+        email: 'kaif@gmail.com',
         password: hashedPassword
       });
       
       await admin.save();
       console.log('✅ Admin created successfully!');
-      console.log('📧 Email: admin@example.com');
-      console.log('🔑 Password: admin123');
+      console.log('📧 Email: kaif@gmail.com');
+      console.log('🔑 Password: kaif123');
       console.log('🆔 ID:', admin._id);
     }
     
